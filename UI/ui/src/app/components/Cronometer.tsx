@@ -18,7 +18,6 @@ const Cronometer: React.FC<TimerProps> = ({ setElapsedTime }) => {
         setSeconds((prevSeconds) => prevSeconds + 1);
       }, 1000)
     } else {
-      // clearInterval(interval);
     }
 
     return () => clearInterval(interval);
