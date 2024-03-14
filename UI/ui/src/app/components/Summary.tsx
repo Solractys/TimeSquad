@@ -15,9 +15,9 @@ const Summary: React.FC<SummaryProps> = ({ elapseTime, hourlyRate }) => {
   const totalEarned = (elapseTime / 3600) * hourlyRate;
 
   return(
-    <div>
-      <p>Tempo decorrido: {formatTime(elapseTime)}</p>
-      <p>Valor acumulado: {totalEarned.toFixed(2)}</p>
+    <div className="p-2 rounded-md w-60 shadow-md">
+      <p className="text-slate-800 text-lg">Tempo decorrido: <span className="text-orange-400">{formatTime(elapseTime)}</span></p>
+      <p className="text-slate-800 text-lg">Valor acumulado: R$ {totalEarned.toFixed(2)}</p>
     </div>
   );
 }

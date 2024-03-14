@@ -28,12 +28,13 @@ const HourlyRateForm: React.FC<HourlyRateFormProps> = ({ setHourlyRate }) => {
             min={0}
             value={hourlyRate}
             onChange={handleInputChange}
-            className="bg-transparent w-20 my-7 mx-4 rounded-md shadow-sm p-2 "
+            className="bg-transparent w-20 my-4 mx-4 rounded-md shadow-sm p-2 "
           />
         </label>
         <div className="flex justify-end items-end">
-          <button className="w-fit rounded-lg font-semibold shadow-lg text-white bg-orange-400 px-4 hover:bg-white transition hover:text-orange-400 " type="submit">Enviar</button>
+          <button className="w-fit rounded-lg  mb-2 font-semibold shadow-lg text-white bg-orange-400 px-4 hover:bg-white transition hover:text-orange-400 " type="submit">Enviar</button>
         </div>
+        <p className="text-slate-700 font-light">Você pode alterar o valor há qualquer momento.</p>
       </form>
     </div>
   );

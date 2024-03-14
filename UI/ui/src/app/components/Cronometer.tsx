@@ -41,7 +41,7 @@ const Cronometer: React.FC<TimerProps> = ({setElapsedTime}) => {
   };
   return (
     <div className="rounded-md shadow-lg p-8 w-64 block">
-        <div className="text-5xl mb-8 text-center ">{formatTimer(seconds)}</div>
+        <div className="text-5xl mb-8 text-center text-slate-900 font-semibold">{formatTimer(seconds)}</div>
       <div className="flex gap-8 justify-center items-center">
         <button className="w-fit  rounded-lg font-semibold shadow-lg text-orange-400  px-4 hover:bg-orange-400 transition hover:text-white" onClick={troggleTimer}>{isActive ? 'Pause' : 'Start'}</button>
         <button className="w-fit  rounded-lg  font-semibold shadow-lg text-orange-400  px-4 hover:bg-orange-400 transition hover:text-white" onClick={resetTimer}>Reset</button>
