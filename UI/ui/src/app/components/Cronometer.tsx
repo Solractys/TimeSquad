@@ -1,7 +1,12 @@
 "use client"
 import React, { useState, useEffect } from "react";
 
-const Cronometer: React.FC = () => {
+interface TimerProps {
+  setElapsedTime: React.Dispatch<React.SetStateAction<number>>;
+}
+
+
+const Cronometer: React.FC<TimerProps> = ({setElapsedTime}) => {
   const [seconds, setSeconds] = useState<number>(0);
   const [isActive, setIsActive] = useState<number>(0);
 
@@ -31,6 +36,7 @@ const Cronometer: React.FC = () => {
   const formatTimer = (timeInSeconds: number): string => {
     const minutes = Math.floor(timeInSeconds / 60);
     const seconds = timeInSeconds % 60;
+    setElapsedTime(timeInSeconds)
     return `${minutes.toString().padStart(2, '0')} : ${seconds.toString().padStart(2, '0')}`;
   };
   return (
